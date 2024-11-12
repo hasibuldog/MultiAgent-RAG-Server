@@ -1,0 +1,5 @@
+.env
+helper_notes/
+hudai.txt
+__pycache__/
+.ruff_cache/
