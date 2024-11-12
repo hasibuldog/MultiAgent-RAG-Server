@@ -2,7 +2,8 @@ from langchain.schema import Document
 import PyPDF2
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from typing import List
-from utils.db import vectorstore, retriever
+from tools.retrivers import vectorstore, semantic_retriever as retriever
+
 from langchain_community.document_loaders import PyPDFLoader
 
 

@@ -23,13 +23,3 @@ azure_embeddings = AzureOpenAIEmbeddings(
     azure_deployment=os.getenv("AZURE_EMBEDDING_DEPLOYMENT"),
     api_version=os.getenv("EMBEDDING_API_VERSION"),
 )
-
-# print(os.getenv("AZURE_OPENAI_ENDPOINT"))
-# print(os.getenv("EMBEDDING_API_VERSION"))
-# print(os.getenv("AZURE_OPENAI_API_KEY"))
-# print(os.getenv("OPENAI_API_VERSION"))
-# print(os.getenv("AZURE_EMBEDDING_DEPLOYMENT"))
-
-
-# print(azure_embeddings.embed_query("hi"))
-# print(model.invoke("hi"))

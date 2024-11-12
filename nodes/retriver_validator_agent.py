@@ -21,10 +21,7 @@ semantic_retrival_tool = Tool(
 )
 
 
-
-
 def retrieval_validator_agent(state: AgentState) -> AgentState:
-
     validator_prompt = ChatPromptTemplate.from_messages(
         [
             (
@@ -65,7 +62,7 @@ def retrieval_validator_agent(state: AgentState) -> AgentState:
         agent=validator_agent,
         memory=memory,
         tools=[semantic_retrival_tool],
-        verbose=True
+        verbose=True,
     )
     if state["total_search"] == 0:
         try:
@@ -95,9 +92,9 @@ def retrieval_validator_agent(state: AgentState) -> AgentState:
     AgentState.add_ai_message(state, output)
 
     if output.startswith("YES"):
-        AgentState.set_next_step(state, step = state['option'])
+        AgentState.set_next_step(state, step=state["option"])
     else:
-        AgentState.set_next_step(state, step = "search")
+        AgentState.set_next_step(state, step="search")
         state["search_query"] = output.split("=")[-1]
 
     return state
@@ -117,4 +114,3 @@ def retrieval_validator_agent(state: AgentState) -> AgentState:
 
 
 # test_agent("What is Amdahl's law? Give full definition and formula.")
-
