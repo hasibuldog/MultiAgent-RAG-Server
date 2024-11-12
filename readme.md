@@ -54,7 +54,8 @@ The system consists of several specialized agents working together:
 6. **Summary Agent**: 
     - Creates concise summaries of study materials
 
-[Agent Graph](output.jpeg?raw=true "Agent Graph")
+## Agent Graph
+<img src="output.jpeg" alt="Agent Graph" >
 
 
 ## Usage
